@@ -4,19 +4,24 @@
 <title>Zhong Li</title>
 </head>
 <style>
+    html{
+        cursor:url(cursor_resize.png), auto;
+    }
     body{
         background-image:url("https://images5.alphacoders.com/109/1099191.jpg");
         margin-top: -0.5%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     #pageBody{
         position:absolute;
         width:66%;
-        height: 100%;
+        height:500%;
         left:16.5%;
         right:16.5%;
-        background-color:rgba(255, 255, 255, 0.8);
-        background-repeat: no-repeat;
-    }
+        background-color:rgba(230, 224, 207, 0.8);
+        }
+    
 
     #intro{
       font-family: arial, sans-serif;
@@ -25,28 +30,26 @@
       width: 100;
     }
     
-    
-    #intro tr{
-      border: 1px solid #4d3b2f;
+    #intro td{
+        border: 1px solid #462210;  
+        padding: 7px;
+        word-wrap:break-word;
+    }
+
+    #intro th{
+        border: 1px solid #8d7551;  
+        padding: 7px;
+        word-wrap:break-word;
+        text-align:center;
+        background-color: #b99c71;
     }
 
     #intro td{
-        border: 2px solid #423328;  
+        border: 1px solid #b9b7af;  
         padding: 7px;
-        word-wrap:break-word
-
-    }
-    
-    #intro tr:nth-child(even) {
-      border: 1px solid #4d3b2f;  
-      background-color: #bb8968;
-      padding: 5px;
-    }
-
-    #intro tr:nth-child(odd) {
-        border: 1px solid #4d3b2f;
-        background-color: #e3af8d;
-        padding: 5px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+        
     }
 
     #charPic {
@@ -66,20 +69,230 @@
         width: 60%;
     }
 
+    #charAttribute {
+        position:absolute;
+        width: 60%;
+        left: 5%;
+        margin-top:620px;
+    }
+
+    #attribute{
+      font-family: arial, sans-serif;
+      table-layout: fixed;
+      border-collapse: collapse;
+      width: 100;
+    }
+
+    #attribute th{
+        border: 1px solid #8d7551;  
+        padding: 7px;
+        word-wrap:break-word;
+        text-align:center;
+    }
+
+    #attribute td{
+        border: 1px solid #b9b7af;  
+        padding: 7px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+        text-align:center;
+    }
+
+    #attribute tr:nth-child(1) {
+        background-color: #b99c71;
+    }
+
+    #attribute tr:nth-child(2) {
+        background-color: #b99c71;
+    }
+
+    #charOtherInfo{
+        position:absolute;
+        margin-top:47px;
+    }
+
+    #otherInfo{
+      font-family: arial, sans-serif;
+      table-layout: fixed;
+      border-collapse: collapse;
+      width: 100;
+    }
+
+    #otherInfo th{
+        border: 1px solid #8d7551;  
+        padding: 7px;
+        word-wrap:break-word;
+        text-align:center;
+        background-color: #b99c71;
+    }
+
+    #otherInfo td{
+        border: 1px solid #b9b7af;  
+        padding: 7px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+        text-align:center;
+    }
+
+    .headCol{
+       position: absolute;
+       width:59.5px;
+    }
+
     .header{
         background-image: url("http://clipart-library.com/img1/1668320.png");
         background-repeat: no-repeat;
         background-position: center;
     }
 
+
+    #charAscension{
+        position:absolute;
+        width: 60%;
+        left: 5%;
+        margin-top:1120px;
+    }
+
+    #ascension{
+      font-family: arial, sans-serif;
+      table-layout: fixed;
+      border-collapse: collapse;
+      width: 100;
+    }
+
+    #ascension td{
+        border: 1px solid #b9b7af;  
+        padding: 9px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+    }
+
+    #ascension th{
+        border: 1px solid #b99c71;  
+        padding: 7px;
+        word-wrap:break-word;
+        text-align:center;
+    } 
+    #ascension tr:nth-child(1) {
+        background-color: #b99c71;
+        
+    }
+
+    #ascension tr:nth-child(4) {
+        background-color: #b99c71;
+    }
+
+    #ascension tr:nth-child(6) {
+        background-color: #b99c71;
+    }
+
+    #ascension tr:nth-child(8) {
+        background-color: #b99c71;
+    }
+
+    #ascension tr:nth-child(11) {
+        background-color: #b99c71;
+    }
+
+    #ascension tr:nth-child(13) {
+        background-color: #b99c71;
+    }
+
+    #ascension tr:nth-child(15) {
+        background-color: #b99c71;
+    }
+
+    .ascensionMat{
+        font-size: 13px;
+        font-weight:bold;
+    }
+
+    #charStory{
+        position:absolute;
+        margin-top: 47px;
+    }
+
+    .collapsible {
+        background-color: #b99c71;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        font-family: arial, sans-serif;
+        font-size: 16px;
+        font-weight:bold;
+    }
+
+    .collapsible:hover {
+        background-color: #a1865e;
+        border: 1px solid #8d7551; 
+    }
+
+    .storyContent{
+        padding: 11px;
+        display: none;
+        border: 1px solid #b9b7af;
+        background-color: #f1f1f1;
+        font-family: arial, sans-serif;
+        font-size: 16px;
+        
+        
+    }
+    
+    #firstStory{
+      font-family: arial, sans-serif;
+      table-layout: fixed;
+      border-collapse: collapse;
+      width: 100;
+    }
+
+    #firstStory td{
+        border: 1px solid #b9b7af;  
+        padding: 11px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+    }
+
+    #firstStory th{
+        background-color: #b99c71;
+        padding: 8px;
+        word-wrap:break-word;
+    } 
+
+    .picButton{
+        background-color: #b99c71;
+        color: #f1f1f1;
+        border: 1px solid #967d58;
+        padding:7px 18px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom:13px;
+        transition-duration:0.4s;
+        font-size:14px;
+    }
+
+    .picButton:hover{
+        background-color:#e4e3e0;
+        color:rgb(49, 34, 6);
+        font-weight:bold;
+    }
+
+    #buttonSet{
+        font-size: 0;
+        margin-bottom:10px;
+        
+    }
 </style>
+
+
+
 <body>
     <div id="pageBody">
-
         <div id="pageHead">
-
         </div>
 
+        
         <div id="charInfo">
             <div class="header">
                 <h2 style="text-align: center;">Zhong Li</h2>
@@ -87,71 +300,553 @@
 
             <table id="intro"> 
                 <tr> 
-                    <td>title</td>
-                    <td>worldly wandering</td>
+                    <th>Title</th>
+                    <td>Vago Mundo</td>
                 </tr>
                 <tr> 
-                    <td>full name/real name</td>
+                    <th>Real Name</th>
                     <td>Morax</td>
                 </tr>
                 <tr> 
-                    <td>Country</td>
-                    <td>Ligetsu</td>
+                    <th>Region</th>
+                    <td>Liyue</td>
                 </tr>
                 <tr> 
-                    <td>Gender</td>
-                    <td>male</td>
+                    <th>Gender</th>
+                    <td>Male</td>
                 </tr>
                 <tr> 
-                    <td>Rarity</td>
+                    <th>Rarity</th>
                     <td><img src="https://patchwiki.biligame.com/images/ys/c/c7/qu6xcndgj6t14oxvv7yz2warcukqv1m.png" /></td>
                 </tr>
                 <tr> 
-                    <td>Resident/Limited</td>
-                    <td>Limited UP</td>
+                    <th>Banner</th>
+                    <td>Event Banner</td>
                 </tr>
                 <tr> 
-                    <td>element attribute</td>
-                    <td>rock</td>
+                    <th>Gnosis</th>
+                    <td>Geo</td>
                 </tr>
                 <tr> 
-                    <td>weapon type</td>
-                    <td>polearm</td>
+                    <th>Weapon</th>
+                    <td>Polearm</td>
                 </tr>
                 <tr> 
-                    <td>Seat of Destiny</td>
-                    <td>Rock King Monarch</td>
+                    <th>Constellation</th>
+                    <td>Lapis Dei</td>
                 </tr>
                 <tr> 
-                    <td>special dishes</td>
+                    <th>Special Dish</th>
                     <td>
                         <img height="25" width="25" src="https://patchwiki.biligame.com/images/ys/thumb/4/4f/r2e2xjdgm99h2v7cqczbqemf83as1pl.png/60px-%E6%96%87%E7%81%AB%E6%85%A2%E7%82%96%E8%85%8C%E7%AC%83%E9%B2%9C.png"/>
-                        <a> Slow-cooked Pickled Duxian</a>
+                        <a> Slow-Cooked Bamboo Shoot Soup</a>
                     </td>
                 </tr>
                 <tr> 
-                    <td>Implementation date</td>
+                    <th>Implementation date</th>
                     <td>December 01, 2020</td>
                 </tr>
                 <tr> 
-                    <td>TAG</td>
+                    <th>TAG</th>
                     <td>Healing, control, resistance reduction, shield, strong shield, forging return, self-damage increase, self-interruption resistance, rock creation</td>
                 </tr>
                 <tr> 
-                    <td>introduce</td>
-                    <td>The mysterious guest invited by the "Palace of Rebirth" is knowledgeable and insightful about various things.            </td>
+                    <th>Overview</th>
+                    <td>A consultant of the Wangsheng Funeral Parlor, he is later revealed to be the current vessel of the Geo Archon, Morax, who has decided to experience the world from the perspective of a mortal.</td>
                 </tr>
 
             </table>
         </div>
-
+        
         <div id="charPic">
             <div class="header">
-                <h2 style="text-align: center;">Picture</h2>
+                <h2 style="text-align: center;">Card</h2>
             </div>
-            <img src="https://patchwiki.biligame.com/images/ys/8/81/8393e6kjulrau058jy9qolyv30bfkiz.png"/>
+            <div id="buttonSet">
+                <button type="button" class="picButton" onclick=card1();>Card</button>
+                <button type="button" class="picButton" onclick=card2();>Card 2</button>
+                <button type="button" class="picButton" onclick=wish();>Wish</button>
+                <button type="button" class="picButton" onclick=inGame1();>In-Game</button>
+                <button type="button" class="picButton" onclick=inGame2();>In-Game 2</button>
+             </div>
+
+            <img id="theImage" src="https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Zhongli_Card.png/revision/latest?cb=20201217052506"/>
+             
+             <script>
+                document.getElementById("charPic").appendChild(charOtherInfo);
+
+                function card1(){
+                    document.getElementById('theImage').src="https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Zhongli_Card.png/revision/latest?cb=20201217052506";
+                }
+                
+                function card2(){
+                    document.getElementById('theImage').src="https://i.redd.it/bxt9bllpgb261.png";
+                }
+
+
+                function wish(){
+                    document.getElementById('theImage').src="https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Character_Zhongli_Full_Wish.png/revision/latest/scale-to-width-down/350?cb=20220507161902";
+                }
+
+                function inGame1(){
+                    document.getElementById('theImage').src="https://patchwiki.biligame.com/images/ys/7/7c/7qfv28ei6mzioty292e1v3eu3ztzzr8.gif";
+                }
+
+                function inGame2(){
+                    document.getElementById('theImage').src="https://patchwiki.biligame.com/images/ys/0/02/tmfpxs4x7cekt2t1788zgl2gx2numvq.gif";
+                }
+             </script>
+
+            <div id="charOtherInfo">
+                <div class="header">
+                    <h2 style="text-align: center;">Other Information</h2>
+                </div>
+
+                <table id="otherInfo">
+                    <tr>
+                        <th>Additional Titles</th>
+                        <td>Wangsheng Funeral Parlor Consultant, God of Contracts, Morax, Yánwáng Dìjūn</td>
+                    </tr>
+                    <tr>
+                        <th>Belongs</th>
+                        <td>Liyue</td>
+                    </tr>
+                    <tr>
+                        <th>Chinese CV</th>
+                        <td>Peng Bo (彭博)</td>
+                    </tr>
+                    <tr>
+                        <th>Japanese CV</th>
+                        <td>Maeno Tomoaki (前野智昭)</td>
+                    </tr>
+                    <tr>
+                        <th>Korean CV</th>
+                        <td>Pyo Yeong-jae (표영재)</td>
+                    </tr>
+                    <tr>
+                        <th>English CV</th>
+                        <td>Keith Silverstein</td>
+                    </tr>
+                    <tr>
+                        <th>Birthday</th>
+                        <td>December 31</td>
+                    </tr>
+                    <tr>
+                        <th>Voice-Overs</th>
+                        <td>Slow-cooked</td>
+                    </tr>
+                    <tr>
+                        <th>Story Quest</th>
+                        <td>Historia Antiqua Chapter</td>
+                    </tr>
+                </table>
+
+                <div id="charStory">
+                    <div class="header">
+                        <h2 style="text-align: center;">Character Stories</h2>
+                    </div>
+                    <table id="firstStory">
+                            <tr><th>Character Details</th></tr>
+                            <tr>
+                                <td><p style="line-height: 1.3;">
+                                    &emsp;In Liyue's traditional customs, "receiving adepti" and "sending adepti off" are equally important.
+                                    <br/><br/>&emsp;The Hus of the Wangsheng Funeral Parlor, who have been in this business for 77 generations, are the masters of handling funerals. However, Hu Tao, the current owner of Wangsheng Funeral Parlor, primarily focuses on the art of sending mortals on their way.
+                                    <br/><br/>&emsp;For the various ceremonies for sending adepti off, Hu Tao usually employs the help of a friend in more or less the same business. That person's name is Zhongli. The adepti have been with Liyue for millennia, but only a handful have ascended in the past three thousand years, which means that everything regarding the traditions now only exists in texts. This is not something one would likely witness twice in their entire lifetime.
+                                    <br/><br/>&emsp;Not even the most particular and learned of researchers or scholars could find one fault in Wangsheng Funeral Parlor's ceremonies for sending adepti off.
+                                    <br/><br/>&emsp;Everything must be perfect, from the costumes, the time, the place, the items, the weather, the scheduled length, the size of the permitted audience, to the stature, profession, and age of said audience. Nothing can be overlooked.
+                                    <br/><br/>&emsp;When folk describe Zhongli as "living history," the latter usually only smiles and sighs.
+                                    <br/><br/>&emsp;"I... just have a good memory."
+                                </p></td>
+                            </tr>
+                    </table>
+        
+                    <button type="button" class="collapsible">Character Story 1 <br/>(Unlock Condition: Friendship Lv. 2)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;In Liyue, if a person pays great attention to details, and has insuperable criteria by which they judge certain matters, then they are called "particular."
+                            <br/><br/>&emsp;In truth, everyone is "particular" about something. Some people hate spicy food, others don't eat fish, and some want their tofu served sweet...
+                            <br/><br/>&emsp;But as for Zhongli, he is particular about everything.
+                            <br/><br/>&emsp;He attends operas performed by only the most celebrated stars, takes only the most luxuriant thrushes out for walks, and he goes into the kitchen personally to instruct the cooks as to the ratio of shrimp and fish required to make the most authentic Fullmoon Egg.
+                            <br/><br/>&emsp;Zhongli has expertise in all manner of things, from fashion to daily essentials, to fine wines and delicacies, to teas and spices, and to flora and fauna. He is also more than capable of participating in discussions on commerce, politics, and international relations.
+                            <br/><br/>&emsp;But on a typical day, all you will glean from him is a few pieces of useless trivia, because he particularly enjoys sharing these fun tidbits with you.                    
+                        </p></td>
+                    </div>
+        
+                    <button type="button" class="collapsible">Character Story 2<br/>(Unlock Condition: Friendship Lv. 3)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;When making a purchase, look to haggle.
+                            <br/><br/>&emsp;This is a common understanding among the people of Liyue. No matter what high heavens the store owner praises their product to, no matter its ancient history or classical value, prices are always flexible. Half the stated cost is a good place to start.
+                            <br/><br/>&emsp;But when Zhongli pays up (or rather, calls for someone else to pay up on his behalf), he never looks at the price tag. As long as it catches his eye, Zhongli will pay as much as the owner asks. Indeed, he will even buy it at a premium sometimes.
+                            <br/><br/>&emsp;But for some reason, Zhongli always forgets to bring money.
+                            <br/><br/>&emsp;For small purchases, he has friends to help him out, and large bills he somehow finds ways to have written off.
+                            <br/><br/>&emsp;To those merchants who secretly pride themselves on their powers of flattery, Zhongli is a man of strange proclivities: in truth, he knows a great deal about the value of money and finance, and he also understands the suffering of the people. However, he seems to not understand that poverty is part of the human condition.
+                            <br/><br/>&emsp;Or perhaps it might be said that he cannot imagine himself being poor.
+                            <br/><br/>&emsp;How has such a person not died of hunger yet?
+                        </p></td>
+                    </div>
+        
+                    <button type="button" class="collapsible">Character Story 3<br/>(Unlock Condition: Friendship Lv. 4)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;There is no way Zhongli can starve.
+                            <br/><br/>&emsp;Such concerns as profit and loss are beneath his notice. The Seven Nations and the world itself are where his efforts are directed.
+                            <br/><br/>&emsp;As for wealth... He is wealth itself.
+                            <br/><br/>&emsp;He is Morax, the overlord Rex Lapis who rules Liyue, and the Geo Archon of the Seven Archons. The very money that circulates throughout Teyvat, Mora, is named after him.
+                            <br/><br/>&emsp;When night falls and bustling Liyue begins to slumber, he will sometimes stand atop the towering mountains and gaze upon this city, which he made with his own hands.
+                            <br/><br/>&emsp;To the people of Liyue, Rex Lapis has many divine titles.
+                            <br/><br/>&emsp;When he laid down Liyue's laws by his divine might, he was the God of Contracts. When he minted the first Mora and made Liyue strong by dint of commerce, the merchants revered him as the God of Commerce.
+                            <br/><br/>&emsp;He has lived through countless years and is the eldest of the Seven, and so historians call him the God of History.
+                            <br/><br/>&emsp;Thousands of years ago, the forebears of the citizens of Liyue Harbor struck stones together to start fires and used piled stones to create stoves. These blessings derived from the Geo element led the Geo Archon to gain the title of God of the Stove.
+                            <br/><br/>&emsp;People from other lands tend to call him Morax, though the people of Liyue prefer to use the term Rex Lapis.
+                            <br/><br/>&emsp;But in the hearts of lovers of opera and children, Morax's on-stage aspect, the all-conquering defender of Liyue — the Warrior God — is the most fascinating.
+                            <br/><br/>&emsp;The delicacies that Rex Lapis discovered while lost in the streets, the plaques inscribed with his handwriting, a famous opera that he once starred in, playing the part of a warrior... Many stories and tales of Liyue are, when studied closely, stories of people visited by their deity at some point — and the citizens of Liyue are most proud indeed of that history.
+                        </p></td>
+                    </div>
+        
+                    <button type="button" class="collapsible">Character Story 4<br/>(Unlock Condition: Friendship Lv. 5)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;As the founder of Liyue Harbor, "contracts" are the most important thing to Morax.
+                            <br/><br/>&emsp;From simple monetary exchange and agreements between merchants to the ancient laws that Morax himself laid down, there is no part of city life untouched by "contracts."
+                            <br/><br/>&emsp;To merchants, "contracts" are the most important standard to which they hold themselves: deadlines, invoices, shipping destinations... Only a refined and strict order can sustain vibrant commerce, which is itself the lifeblood of Liyue Harbor.
+                            <br/><br/>&emsp;Thus the Qixing punish violators of such laws unceasingly, not only to uphold the divine rulings of Morax but also to allow Liyue to maintain its vitality.
+                            <br/><br/>&emsp;Through the millennia, every generation of the Liyue Qixing commits to interpreting the law, including subtle amendments to plug loopholes found in the law. Any loopholes that remain undiscovered are seen by the merchants as "permissible if unaddressed," and they make killings off such holes until they are discovered and patched up by the Liyue Qixing.
+                            <br/><br/>&emsp;Amid this game of cat-and-mouse, the book that collates such amendments has reached a whopping 279 pages thick.
+                            <br/><br/>&emsp;The person currently responsible for maintaining this book, the Tianquan Ningguang, is secretly (and humorously) referred to as the "Tailor of Liyue," in honor of her speed in patching these laws up, and for her sharpness of eye.
+                            <br/><br/>&emsp;But no matter how complicated or tangled mortal laws become, one of these stands above all others in the eyes of Rex Lapis.
+                            <br/><br/>&emsp;"The one who reneges on their words shall suffer the Wrath of the Rock."
+                        </p></td>
+                    </div>
+        
+                    <button type="button" class="collapsible">Character Story 5<br/>(Unlock Condition: Friendship Lv. 6)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;Rex Lapis, most ancient of The Seven, has lived far too long.
+                            <br/><br/>&emsp;Rex Lapis still remembers that moment when the final archon took their divine seat, thus ending the Archon War and the era of warring gods. The Seven were a diverse lot and dispersed far and wide, but they all shouldered the burden of guiding humanity.
+                            <br/><br/>&emsp;As time passed, many of The Seven's titles changed hands, and only two remain of the first Seven: Rex Lapis and the Anemo Archon.
+                            <br/><br/>&emsp;The carefree Barbatos, the Anemo Archon, is the second eldest of The Seven.
+                            <br/><br/>&emsp;When Barbatos first came to Liyue, Rex Lapis believed his fellow archon to have encountered some terrible crisis in pursuit of their duties, thus requiring his aid.
+                            <br/><br/>&emsp;So when Barbatos descended in a gust of wind, the Geo Archon had already prepared himself to receive this neighboring deity and lend what help he may.
+                            <br/><br/>&emsp;But as he looked, the Anemo Archon tossed a wine bottle at him.
+                            <br/><br/>&emsp;"Here's some wine from Mondstadt. Care for a taste?"
+                            <br/><br/>&emsp;To forsake one's duty to deliver a single bottle of wine — what a preposterous notion!
+                            <br/><br/>&emsp;Yet the Anemo Archon kept coming to visit, to explore Liyue Harbor, all sorts of strange questions on his lips. The Anemo Archon's questions knew as little limits as the wine in his hands.
+                            <br/><br/>&emsp;From then on, the first Seven would often gather in Liyue.
+                            <br/><br/>&emsp;Rex Lapis still remembers how those wines tasted.
+                            <br/><br/>&emsp;The world has changed much since then, and all that was once familiar has faded into memory.
+                            <br/><br/>&emsp;The seven seats changed and again were changed, till five of the seven at the table were all departed.
+                            <br/><br/>&emsp;Nor would the duty of guiding humanity be honored by the new archons.
+                            <br/><br/>&emsp;Even the hardest rocks may be worn down after three thousand years.
+                            <br/><br/>&emsp;Nor would the wind ever return again.
+                            <br/><br/>&emsp;One drizzly day, the ancient ruler was strolling about Liyue Harbor, and overheard a merchant telling one of his workers,
+                            <br/><br/>&emsp;"You've finished your duties, go ahead and call it a day."
+                            <br/><br/>&emsp;Long did he stand amidst the milling crowd.
+                            <br/><br/>&emsp;"Have I... already finished my duties?"
+                        </p></td>
+                     </div>
+        
+                    <button type="button" class="collapsible">That Which Rises From the Sea<br/>(Unlock Condition: Friendship Lv. 4)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;During the Archon Wars, every corner of Teyvat was consumed in the fires of conflict. Not only did gods fight amongst themselves, but countless wicked things also sought to expand their domains.
+                            <br/><br/>&emsp;One such type of creature caused no end of woe for the Geo Archon, long before he took that title along with his place among The Seven.
+                            <br/><br/>&emsp;These foul creatures, straight from the murky depths of the ocean abyss, had a squishy exterior, and possessed agile tentacles that would live on even after being cut off, even secreting some thick and revolting fluid in the process.
+                            <br/><br/>&emsp;This alone would have been enough to make them the most monstrous of all creatures, and still it was not the pinnacle of their monstrosity.
+                            <br/><br/>&emsp;What made them so truly terrible was their small size, which gave them the ability to duck into unimaginably small nooks and crannies.
+                            <br/><br/>&emsp;No space was too narrow for them, neither the wooden boards of tables and chairs, nor the seams of windows and doors and curtain folds, nor even books and brushes.
+                            <br/><br/>&emsp;Many a poor soul had, on at least one occasion, unwittingly outstretched their hand, only to quickly retract it in horror with a blood-curdling scream at the sensation of something cold, clammy and damp, while one or more of these despicable creatures came crawling up their arm, leaving a shiny trail behind them...
+                            <br/><br/>&emsp;At the behest of the people of Liyue, Morax agreed to wipe these creatures out. But these parasites upon civilization could not be destroyed like enemies on a battlefield, by simply summoning a storm of stone spears that would shatter the earth and churn the soil....
+                            <br/><br/>&emsp;Still, he was the God of Contracts. His word had to be his bond.
+                            <br/><br/>&emsp;So, he went through the town from house to house with prisons of stone, seizing these creatures one by one and locking them away for good...
+                            <br/><br/>&emsp;This long campaign of pest extermination taught Morax the true meaning of "a burden lifted."
+                            <br/><br/>&emsp;The grueling campaign itself, and the terrible smell of those ocean creatures' secretions, left a lasting impression on the deity.
+                            <br/><br/>&emsp;Today, even when he goes out incognito as the mortal man, Zhongli, Morax gives those living, squirming seafood products a wide berth.
+                            <br/><br/>&emsp;...Well, except for dishes where said seafood products have been sliced and diced into oblivion, such as seafood tofu. He'll quite happily eat those.
+                        </p></td>            
+                    </div>
+        
+                    <button type="button" class="collapsible">Gnosis<br/>(Unlock Condition: Friendship Lv. 6)</button>
+                    <div class="storyContent">
+                        <td><p style="line-height: 1.3;">
+                            &emsp;Once the Rite of Parting, of which Zhongli was both director and star, was over, the Fatui Harbinger named Signora appeared before him.
+                            <br/><br/>&emsp;By prior contract, she was here to claim the Geo Archon Morax's Gnosis.
+                            <br/><br/>&emsp;Before the Traveler and the two Fatui Harbingers, Zhongli related the truth that he had established a contract with the Cryo Archon.
+                            <br/><br/>&emsp;In his own words, this was his final "Contract to End All Contracts."
+                            <br/><br/>&emsp;Yet no matter how one looks at it, the loss of his divine ability to defend Liyue was too great a price to pay.
+                            <br/><br/>&emsp;Even amongst mortals, the basis of a contract is "equivalent exchange."
+                            <br/><br/>&emsp;And for the God of Contracts, who must have established countless such agreements in his long years of existence, such an important contract must have come with its benefits.
+                            <br/><br/>&emsp;Now, the Geo Archon has given away his Gnosis as his part of the deal.
+                            <br/><br/>&emsp;What, then, must the Cryo Archon have wagered to balance the scales?
+                        </p></td>            
+                    </div>
+        
+                    <span style="font-size:105%;color: rgb(17, 112, 156)"> Click on the <span style="font-size:105%;color: rgb(207, 17, 17)">corresponding item</span> to expand and view the detailed story </span>
+                    
+                    <script>
+                        var coll = document.getElementsByClassName("collapsible");            
+                        for (var i = 0; i < coll.length; i++) {
+                          coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.display === "block") {
+                              content.style.display = "none";
+                            } else {
+                              content.style.display = "block";
+                            }
+                          });
+                        }
+                    </script>
+                </div>
+            </div>
+
+
         </div>
+
+        <div id="charAttribute">
+            <div class="header">
+                <h2 style="text-align: center;">Attribute</h2>
+            </div>
+
+            <div style="height:390px; width:753px; overflow:auto;">
+                <table id="attribute"> 
+                    <tr>
+                        <th rowspan="2">Level(s)</th>
+                        <th colspan="2">Max Health</th>
+                        <th colspan="2">Attack</th>
+                        <th colspan="2">Defense</th>
+                        <th colspan="2">Rock Elemental Damage Bonus</th>
+                    </tr>
+                    <tr>
+                        <th>Before Ascension</th>
+                        <th>After Ascension</th> 
+                        <th>Before Ascension</th>
+                        <th>After Ascension</th>
+                        <th>Before Ascension</th>
+                        <th>After Ascension</th> 
+                        <th>Before Ascension</th>
+                        <th>After Ascension</th>
+                    </tr>
+                    <tr>
+                        <td class="headCol">1</td>
+                        <td colspan="2">1144</td>
+                        <td colspan="2">20</td>
+                        <td colspan="2">57</td>
+                        <td colspan="2" rowspan="2">0%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">20</td>
+                        <td>2967</td>
+                        <td>3948</td>
+                        <td>51</td>
+                        <td>67</td>
+                        <td>149</td>
+                        <td>198</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">40</td>
+                        <td>5908</td>
+                        <td>6605</td>
+                        <td>101</td>
+                        <td>113	</td>
+                        <td>297</td>
+                        <td>332</td>
+                        <td>0%</td>
+                        <td>7.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">50</td>
+                        <td>7599</td>
+                        <td>8528</td>
+                        <td>130</td>
+                        <td>146</td>
+                        <td>382	</td>
+                        <td>428</td>
+                        <td>7.2%</td>
+                        <td>14.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">60</td>
+                        <td>9533</td>
+                        <td>10230</td>
+                        <td>163</td>
+                        <td>175</td>
+                        <td>479</td>
+                        <td>514</td>
+                        <td>14.4%</td>
+                        <td>14.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">70</td>
+                        <td>11243</td>
+                        <td>11940</td>
+                        <td>192</td>
+                        <td>204</td>
+                        <td>564</td>
+                        <td>599</td>
+                        <td>14.4%</td>
+                        <td>21.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">80</td>
+                        <td>12965</td>
+                        <td>13662</td>
+                        <td>222</td>
+                        <td>233</td>
+                        <td>651</td>
+                        <td>686</td>
+                        <td>21.6%</td>
+                        <td>28.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="headCol">90</td>
+                        <td>14695</td>
+                        <td>-</td>
+                        <td>251</td>
+                        <td>-</td>
+                        <td>738</td>
+                        <td>-</td>
+                        <td>28.8%</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div id="charAscension">
+            <div class="header">
+                <h2 style="text-align: center;">Ascensions and Stats</h2>
+            </div>
+
+            <table id="ascension">
+                <tr>
+                    <th colspan="2"><em>Level 20</em>&emsp; - &emsp;Ascension Phase (Level 1~20 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 6</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 24,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 20,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/1/1f/ktx2mtd48unswlqnmnq1ukc7dla5oic.png" />
+                        <a class="ascensionMat">x 1&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 3&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/b/b7/qplyoio0h7c0b3nd40jb44ufuce93yd.png" />
+                        <a class="ascensionMat">x 3</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Talent Unlocked</b></td>
+                    <td>
+                        <img width ="40" src="https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_Resonant_Waves.png/revision/latest?cb=20210607091531" />
+                        Resonant Waves
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 40</em>&emsp; - &emsp;Ascension Phase (Level 20~40 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 29</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 120,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 40,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/a/a5/42411cdsl4a5fvn9l3eontkmst59c8m.png" />
+                        <a class="ascensionMat">x 3&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/33/1n714bntt1r529t635svfpjuw9tcmeg.png" />
+                        <a class="ascensionMat">x 2&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 10&emsp;&emsp;&emsp;</a>              
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/b/b7/qplyoio0h7c0b3nd40jb44ufuce93yd.png" />
+                        <a class="ascensionMat">x 15</a>   
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 50</em>&emsp; - &emsp;Ascension Phase (Level 40~50 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 29</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 120,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 60,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/a/a5/42411cdsl4a5fvn9l3eontkmst59c8m.png" />
+                        <a class="ascensionMat">x 6&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/33/1n714bntt1r529t635svfpjuw9tcmeg.png" />
+                        <a class="ascensionMat">x 4&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 20&emsp;&emsp;&emsp;</a>              
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/e/e5/ffmbdyr7g1kekf246gf642hpvd6izmc.png" />
+                        <a class="ascensionMat">x 12</a>   
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 60</em>&emsp; - &emsp;Ascension Phase (Level 50~60 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 43</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 170,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 80,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/38/rs4gwsh1p3mnt2oj8mmyw0g07bthyq5.png" />
+                        <a class="ascensionMat">x 3&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/33/1n714bntt1r529t635svfpjuw9tcmeg.png" />
+                        <a class="ascensionMat">x 8&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 30&emsp;&emsp;&emsp;</a>              
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/e/e5/ffmbdyr7g1kekf246gf642hpvd6izmc.png" />
+                        <a class="ascensionMat">x 18</a>   
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Talent Unlocked</b></td>
+                    <td>
+                        <img width ="40" src="https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Dominance_of_Earth.png/revision/latest?cb=20210607085620" />
+                        Dominance of Earth
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 70</em>&emsp; - &emsp;Ascension Phase (Level 60~70 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 60</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 240,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 100,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/38/rs4gwsh1p3mnt2oj8mmyw0g07bthyq5.png" />
+                        <a class="ascensionMat">x 6&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/33/1n714bntt1r529t635svfpjuw9tcmeg.png" />
+                        <a class="ascensionMat">x 12&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 45&emsp;&emsp;&emsp;</a>              
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/6/6b/bxa3j85irrhea15xcrioou29bdl5j1t.png" />
+                        <a class="ascensionMat">x 12</a>   
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 80</em>&emsp; - &emsp;Ascension Phase (Level 70~80 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 81</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 320,000</span>)</th>
+                </tr>
+                <tr>
+                    <td><b>Material</b></td>
+                    <td>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" />
+                        <a class="ascensionMat">x 120,000&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/6/6f/2jzw9lcoeqwd2facu5f2qm8ttbvthv8.png" />
+                        <a class="ascensionMat">x 6&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/3/33/1n714bntt1r529t635svfpjuw9tcmeg.png" />
+                        <a class="ascensionMat">x 20&emsp;&emsp; </a>
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/0/08/fpwa8xb4wy8me23jlvlxpmfym9lp364.png" />
+                        <a class="ascensionMat">x 60&emsp;&emsp;&emsp;</a>              
+                        <img width ="70" src="https://patchwiki.biligame.com/images/ys/6/6b/bxa3j85irrhea15xcrioou29bdl5j1t.png" />
+                        <a class="ascensionMat">x 24</a>   
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><em>Level 90</em>&emsp; - &emsp;Ascension Phase (Level 80~90 consumes about <span style="color: rgb(125, 78, 156)">Hero's Wit  </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/5/57/premku9p4bm8rvnj2w10ut7ug282dlg.png" /> <span style="color: rgb(207, 17, 17)">× 172</span><br/> and <span style="color: rgb(196, 117, 0)">Mora </span><img width ="30" src="https://patchwiki.biligame.com/images/ys/3/34/60ggyaeh31ait5jbwj9dqjsypgd0jle.png" /><span style="color: rgb(207, 17, 17)">× 680,000</span>)</th>
+                </tr>
+            </table>
+        </div>
+
 
     </div>
 </body>
-</html>
+</html><div class="text">
