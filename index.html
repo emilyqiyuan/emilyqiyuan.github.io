@@ -145,7 +145,6 @@
         background-position: center;
     }
 
-
     #charAscension{
         position:absolute;
         width: 60%;
@@ -281,8 +280,75 @@
     #buttonSet{
         font-size: 0;
         margin-bottom:10px;
-        
     }
+
+    #buttonSet2{
+        font-size: 0;
+        margin-bottom:20px;
+    }
+
+    #charConstellation{
+        position: absolute;
+        margin-top:30px;
+        margin-left: calc(-51vw + 50% + 10px);
+    }
+
+    #constellation{
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+    }
+
+
+    #constellation th{
+        background-color: #b99c71;
+        padding: 9px;
+        word-wrap:break-word;
+        border: 1px solid #8d7551;  
+    }
+
+    #constellation img{
+        position:relative;
+        width:35px;
+        height:35px;
+    }
+
+    #constellation td{
+        border: 1px solid #b9b7af;  
+        padding: 15px 20px;
+        word-wrap:break-word;
+        background-color: #e4e3e0;
+    }
+
+    #talentInfo{
+        background-color:rgba(236, 231, 218, 0.6);
+        border-radius: 30px;
+        font-family: arial, sans-serif;
+        color:#4e463d;
+    }
+
+    #talentDescriSpan{
+        background-color: #968b80;
+        color: #e4e3e0;
+        border-radius: 10px;
+        padding: 3px 10px;
+        margin-top:20px;
+        margin-left:25px;
+    }
+
+    #talentInfo p{
+        margin-left:340px;
+        margin-top:20px;
+        line-height:1.6;
+        padding-right:40px;
+
+    }
+
+    #talentHead{
+        font-weight:bold;
+        margin-left:10px;
+    }
+
+
 </style>
 
 
@@ -373,8 +439,6 @@
             <img id="theImage" src="https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Zhongli_Card.png/revision/latest?cb=20201217052506"/>
              
              <script>
-                document.getElementById("charPic").appendChild(charOtherInfo);
-
                 function card1(){
                     document.getElementById('theImage').src="https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Zhongli_Card.png/revision/latest?cb=20201217052506";
                 }
@@ -597,6 +661,212 @@
                           });
                         }
                     </script>
+
+                    <div id="charConstellation">
+                        <div class="header" style="background-size:1130px; ">
+                            <h2 style="text-align: center;">Constellation</h2>
+                        </div>
+
+                        <table id="constellation">
+                            <tr>
+                                <th>Name</th>
+                                <th>Effect</th>
+                            </tr>
+                            <tr>
+                                <td><img src="constellation_rock.png"/>&ensp;Rock, the Backbone of Earth</td>
+                                <td>Increases the maximum number of Stone Steles created by Dominus Lapidis that may exist simultaneously to 2.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_Stone%2C_the_Cradle_of_Jade.png/revision/latest/scale-to-width-down/45?cb=20210607084145"/>&ensp;Stone, the Cradle of Jade</td>
+                                <td>Planet Befall grants nearby characters on the field a Jade Shield when it descends.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/0/08/Constellation_Jade%2C_Shimmering_through_Darkness.png/revision/latest/scale-to-width-down/45?cb=20210607083309"/>&ensp;Jade, Shimmering through Darkness</td>
+                                <td>Increases the Level of Dominus Lapidis by 3.<br/>Maximum upgrade level is 15.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Constellation_Topaz%2C_Unbreakable_and_Fearless.png/revision/latest/scale-to-width-down/45?cb=20210607084447"/>&ensp;Topaz, Unbreakable and Fearless</td>
+                                <td>Increases Planet Befall's AoE by 20% and increases the duration of Planet Befall's Petrification effect by 2s.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Constellation_Lazuli%2C_Herald_of_the_Order.png/revision/latest/scale-to-width-down/45?cb=20210607083413"/>&ensp;Lazuli, Herald of the Order</td>
+                                <td>Increases the Level of Planet Befall by 3.<br/>Maximum upgrade level is 15.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Constellation_Chrysos%2C_Bounty_of_Dominator.png/revision/latest/scale-to-width-down/45?cb=20210607082102"/>&ensp;Chrysos, Bounty of Dominator</td>
+                                <td>When the Jade Shield takes DMG, 40% of that incoming DMG is converted to HP for the current character.<br/>A single instance of regeneration cannot exceed 8% of that character's Max HP.</td>
+                            </tr>
+                        </table>
+
+
+                        <div id="charTalent">
+                            <div class="header" style="background-size:1130px; ">
+                                <h2 style="text-align: center;">Talents</h2>
+                            </div>
+
+                            <div id="buttonSet2">
+                                <button type="button" class="picButton" onclick=rainOfStone();>Normal Attack • Rain of Stone</button>
+                                <button type="button" class="picButton" onclick=dominusLapidis();>Elemental Skill • Dominus Lapidis</button>
+                                <button type="button" class="picButton" onclick=planetBefall();>Elemental Burst • Planet Befall</button>
+                                <button type="button" class="picButton" onclick=resonantWaves();>Resonant Waves</button>
+                                <button type="button" class="picButton" onclick=dominanceOfEarth();>Dominance of Earth</button>
+                                <button type="button" class="picButton" onclick=arcanumOfCrystal();>Arcanum of Crystal</button>
+                             </div>
+
+                            
+                            <div id ="talentInfo">
+                                <img id="talentLogo" style="position:relative;margin-left:10px;margin-top:10px;width:35px;height:35px;"src="rainOfStoneLogo.png"/><a id="talentHead">Normal Attack • Rain of Stone</a>
+                                <br/>
+
+                                <br/>
+                                <img id="talentGif" style="float:left;margin-left:10px;height:170px;width:300px;" src="rainOfStone.gif"/> 
+                                <span id="talentDescriSpan">Description</span>
+                                <p id="talentDescription" style="margin-top:5px;"></p>
+                                
+                                <p id="talentAbout1">
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Normal Attack<br/></a>
+                                    Performs up to 6 consecutive spear strikes.<br/><br/>
+
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Charged Attack<br/></a>
+                                    Consumes a certain amount of Stamina to lunge forward, causing stone spears to fall along his path.<br/><br/>
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Plunging Attack<br/></a>
+                                    Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing <span style="font-weight:bold;color: rgb(158, 106, 29)">AoE DMG</span> upon impact.<br/><br/>
+                                </p>
+
+                                <p id="talentAbout2" style="display: none;">
+                                    <br/>
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Press<br/></a>
+                                    Commands the power of earth to create a Stone Stele.<br/><br/>
+
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Hold<br/></a>
+                                    Causes nearby Geo energy to explode, causing the following effects:<br/>
+                                    • &ensp;If their maximum number hasn't been reached, creates a Stone Stele.<br/>
+                                    • &ensp;Creates a shield of jade. The shield's DMG Absorption scales based on Zhongli's Max HP.<br/>
+                                    • &ensp;Deals <span style="font-weight:bold;color: rgb(158, 106, 29)">AoE Geo DMG</span>.<br/>
+                                    • &ensp;If there are nearby targets with the <span style="font-weight:bold;color: rgb(158, 106, 29)">Geo element</span>, it will drain a large amount of <span style="font-weight:bold;color: rgb(158, 106, 29)">Geo element</span> from a maximum of 2 such targets. This effect does not cause DMG.<br/><br/>
+
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Stone Stele<br/></a>
+                                    When created, deals <span style="font-weight:bold;color: rgb(158, 106, 29)">AoE Geo DMG</span>.<br/>
+                                    Additionally, it will intermittently resonate with other nearby <span style="font-weight:bold;color: rgb(158, 106, 29)">Geo constructs</span>, dealing <span style="font-weight:bold;color: rgb(158, 106, 29)">Geo DMG</span> to surrounding opponents.<br/>
+                                    The Stone Stele is considered a <span style="font-weight:bold;color: rgb(158, 106, 29)">Geo construct</span> that can both be climbed and used to block attacks.<br/>
+                                    Only one Stele created by Zhongli himself may initially exist at any one time.<br/><br/>
+
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Stone Stele<br/></a>
+                                    Possesses 150% DMG Absorption against all Elemental and Physical DMG.<br/>
+                                    Characters protected by the Jade Shield will decrease the Elemental RES and Physical RES of opponents in a small AoE by 20%. This effect cannot be stacked.<br/><br/>
+                                </p>
+
+                                <p id="talentAbout3" style="display: none;">
+                                    <a style="font-weight:bold;color: rgb(204, 153, 57)">Petrification<br/></a>
+                                    Opponents affected by the <span style="font-weight:bold;color: rgb(158, 106, 29)">Petrification</span> status cannot move.<br/><br/><br/>
+                                </p>
+
+                                <p id="talentAbout4" style="display: none;">
+                                    When the <span style="font-weight:bold;color: rgb(158, 106, 29)">Jade Shield</span> takes DMG, it will Fortify:<br/>
+                                    • &ensp;Fortified characters have 5% increased Shield Strength.<br/>
+                                    • &ensp;Can stack up to 5 times, and lasts until the Jade Shield disappears.<br/><br/>
+                                </p>
+
+                                <p id="talentAbout5" style="display: none;">
+                                    Zhongli deals bonus DMG based on his Max HP:<br/>
+                                    • &ensp;<span style="font-weight:bold;color: rgb(158, 106, 29)">Normal Attack, Charged Attack, and Plunging Attack</span> DMG is increased by 1.39% of Max HP.<br/>
+                                    • &ensp;<span style="font-weight:bold;color: rgb(158, 106, 29)">Dominus Lapidis</span>' Stone Stele, resonance, and hold DMG is increased by 1.9% of Max HP.<br/>
+                                    • &ensp;<span style="font-weight:bold;color: rgb(158, 106, 29)">Planet Befall</span>'s DMG is increased by 33% of Max HP.<br/><br/>
+                                </p>
+
+                                <p id="talentAbout6" style="display: none;">
+                                    Refunds 15% of the ore used when <span style="font-weight:bold;color: rgb(158, 106, 29)">crafting Polearm-type</span> weapons.<br/><br/>
+                                </p>
+
+                            </div>
+
+                             <script>
+                                function rainOfStone(){
+                                    document.getElementById('talentLogo').src="rainOfStoneLogo.png";
+                                    document.getElementById('talentHead').innerHTML="Normal Attack • Rain of Stone";
+                                    document.getElementById('talentGif').src="rainOfStone.gif";
+                                    document.getElementById('talentGif').style.display="block";
+                                    document.getElementById('talentDescription').innerHTML  = ""
+                                    document.getElementById('talentAbout1').style.display="block";
+                                    document.getElementById('talentAbout2').style.display="none";
+                                    document.getElementById('talentAbout3').style.display="none";
+                                    document.getElementById('talentAbout4').style.display="none";
+                                    document.getElementById('talentAbout5').style.display="none";
+                                    document.getElementById('talentAbout6').style.display="none";
+                                }
+
+                                function dominusLapidis(){
+                                    document.getElementById('talentLogo').src="dominusLapidisLogo.png";
+                                    document.getElementById('talentGif').src="dominusLapidis.gif";
+                                    document.getElementById('talentGif').style.display="block";
+                                    document.getElementById('talentHead').innerHTML="Elemental Skill • Dominus Lapidis";
+                                    document.getElementById('talentDescription').innerHTML  = "Every mountain, rock and inch of land is filled with the power of Geo, but those who can wield such powers freely are few and far between."
+                                    document.getElementById('talentAbout1').style.display="none";
+                                    document.getElementById('talentAbout2').style.display="block";
+                                    document.getElementById('talentAbout3').style.display="none";
+                                    document.getElementById('talentAbout4').style.display="none";
+                                    document.getElementById('talentAbout5').style.display="none";
+                                    document.getElementById('talentAbout6').style.display="none";
+                                }
+
+                                function planetBefall(){
+                                    document.getElementById('talentLogo').src="planetBefallLogo.png";
+                                    document.getElementById('talentGif').src="planetBefall.gif";
+                                    document.getElementById('talentGif').style.display="block";
+                                    document.getElementById('talentHead').innerHTML="Elemental Burst • Planet Befall";
+                                    document.getElementById('talentDescription').innerHTML  = "Brings a falling meteor down to earth, dealing massive Geo DMG to opponents caught in its AoE and applying the Petrification status to them."
+                                    document.getElementById('talentAbout1').style.display="none";
+                                    document.getElementById('talentAbout2').style.display="none";
+                                    document.getElementById('talentAbout3').style.display="block";
+                                    document.getElementById('talentAbout4').style.display="none";
+                                    document.getElementById('talentAbout5').style.display="none";
+                                    document.getElementById('talentAbout6').style.display="none";
+                                }
+
+                                function resonantWaves(){
+                                    document.getElementById('talentLogo').src="resonantWavesLogo.png";
+                                    document.getElementById('talentHead').innerHTML="1st Ascension Passive • Resonant Waves";
+                                    document.getElementById('talentGif').style.display="none";
+                                    document.getElementById('talentDescription').innerHTML  = ""
+                                    document.getElementById('talentAbout4').style.marginLeft="30px";
+                                    document.getElementById('talentAbout1').style.display="none";
+                                    document.getElementById('talentAbout2').style.display="none";
+                                    document.getElementById('talentAbout3').style.display="none";
+                                    document.getElementById('talentAbout4').style.display="block";
+                                    document.getElementById('talentAbout5').style.display="none";
+                                    document.getElementById('talentAbout6').style.display="none";
+                                }
+
+                                function dominanceOfEarth(){
+                                    document.getElementById('talentLogo').src="dominanceOfEarthLogo.png";
+                                    document.getElementById('talentHead').innerHTML="4th Ascension Passive • Dominance of Earth";
+                                    document.getElementById('talentGif').style.display="none";
+                                    document.getElementById('talentDescription').innerHTML  = ""
+                                    document.getElementById('talentAbout5').style.marginLeft="30px";
+                                    document.getElementById('talentAbout1').style.display="none";
+                                    document.getElementById('talentAbout2').style.display="none";
+                                    document.getElementById('talentAbout3').style.display="none";
+                                    document.getElementById('talentAbout4').style.display="none";
+                                    document.getElementById('talentAbout5').style.display="block";
+                                    document.getElementById('talentAbout6').style.display="none";
+                                }
+
+                                function arcanumOfCrystal(){
+                                    document.getElementById('talentLogo').src="arcanumOfCrystalLogo.png";
+                                    document.getElementById('talentHead').innerHTML="Utility Passive • Arcanum of Crystal";
+                                    document.getElementById('talentGif').style.display="none";
+                                    document.getElementById('talentDescription').innerHTML  = ""
+                                    document.getElementById('talentAbout6').style.marginLeft="30px";
+                                    document.getElementById('talentAbout1').style.display="none";
+                                    document.getElementById('talentAbout2').style.display="none";
+                                    document.getElementById('talentAbout3').style.display="none";
+                                    document.getElementById('talentAbout4').style.display="none";
+                                    document.getElementById('talentAbout5').style.display="none";
+                                    document.getElementById('talentAbout6').style.display="block";
+                                }
+                             </script>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -849,4 +1119,4 @@
 
     </div>
 </body>
-</html><div class="text">
+</html>
