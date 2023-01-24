@@ -348,6 +348,11 @@
         margin-left:10px;
     }
 
+    #charTalent{
+        position: absolute;
+        margin-top:40px;
+    }
+
 
 </style>
 
@@ -441,23 +446,28 @@
              <script>
                 function card1(){
                     document.getElementById('theImage').src="card1.png";
+                    document.getElementById('constellationHeader').style.marginTop="20px";
                 }
                 
                 function card2(){
                     document.getElementById('theImage').src="https://i.redd.it/bxt9bllpgb261.png";
+                    document.getElementById('constellationHeader').style.marginTop="210px";
                 }
 
 
                 function wish(){
                     document.getElementById('theImage').src="wish.png";
+                    document.getElementById('constellationHeader').style.marginTop="185px";
                 }
 
                 function inGame1(){
                     document.getElementById('theImage').src="https://patchwiki.biligame.com/images/ys/7/7c/7qfv28ei6mzioty292e1v3eu3ztzzr8.gif";
+                    document.getElementById('constellationHeader').style.marginTop="405px";
                 }
 
                 function inGame2(){
                     document.getElementById('theImage').src="https://patchwiki.biligame.com/images/ys/0/02/tmfpxs4x7cekt2t1788zgl2gx2numvq.gif";
+                    document.getElementById('constellationHeader').style.marginTop="25px";
                 }
              </script>
 
@@ -664,7 +674,7 @@
 
                     <div id="charConstellation">
                         <div class="header" style="background-size:1130px; ">
-                            <h2 style="text-align: center;">Constellation</h2>
+                            <h2 style="text-align: center;" id="constellationHeader">Constellation</h2>
                         </div>
 
                         <table id="constellation">
